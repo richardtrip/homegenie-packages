@@ -40,7 +40,7 @@ Func&lt;byte, byte, bool&gt; sendCommand = (byte code, byte param) =&gt;
 
 Func&lt;int, bool&gt; sendRGBWOnCommand = (int zone) =&gt; 
 {
-  byte[] codes = new byte[]{0x42, 0x45, 0x47, 0x49, 0x4B};
+  byte[] codes = new byte[]{0x35, 0x38, 0x3d, 0x37, 0x2d};
   Program.Notify("MiLight On", zone.ToString());
   //Console.WriteLine("MiLight ************************ Zone " + zone + " Is On");
   return sendCommand(codes[zone], (byte) 0x00);
@@ -48,7 +48,7 @@ Func&lt;int, bool&gt; sendRGBWOnCommand = (int zone) =&gt;
 
 Func&lt;int, bool&gt; sendRGBWOffCommand = (int zone) =&gt; 
 {
-  byte[] codes = new byte[]{0x41, 0x46, 0x48, 0x4A, 0x4C};
+  byte[] codes = new byte[]{0x39, 0x3b, 0x33, 0x3a, 0x36};
   Program.Notify("MiLight Off", zone.ToString());
   //Console.WriteLine("MiLight ************************ Zone " + zone + " Is Off");
   return sendCommand(codes[zone], (byte) 0x00);
