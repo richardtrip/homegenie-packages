@@ -3,16 +3,16 @@
   <ConditionType>OnTrue</ConditionType>
   <Conditions />
   <Commands />
-  <ScriptCondition>Program.UseWidget("homegenie/generic/colorlight");
+  <ScriptCondition>Program.UseWidget("homegenie/generic/light");
 
-Program.AddVirtualModules("HomeAutomation.MiLightRGBW", "Light", "homegenie/generic/colorlight", 0, 4);
-//Program.AddVirtualModules("HomeAutomation.MiLightWhite", "Light", "homegenie/generic/light", 0, 4);
+//Program.AddVirtualModules("HomeAutomation.MiLightRGBW", "Light", "homegenie/generic/colorlight", 0, 4);
+Program.AddVirtualModules("HomeAutomation.MiLightWhite", "Light", "homegenie/generic/light", 0, 4);
 
 Program.AddOption("HomeGenieMiLightAddress", "192.168.0.?", "MiLight IP Address", "text");
 Program.AddOption("HomeGenieMiLightPort","8899", "MiLight UDP Port", "text");
 
-Program.AddFeature("HomeAutomation.MiLightRGBW", "Dimmer,Light", "MiLight.LevelFix", "Set level to 100% when switched on", "checkbox");
-//Program.AddFeature("HomeAutomation.MiLightWhite", "Dimmer,Light", "MiLight.LevelFix", "Set level to 100% when switched on", "checkbox");
+//Program.AddFeature("HomeAutomation.MiLightRGBW", "Dimmer,Light", "MiLight.LevelFix", "Set level to 100% when switched on", "checkbox");
+Program.AddFeature("HomeAutomation.MiLightWhite", "Dimmer,Light", "MiLight.LevelFix", "Set level to 100% when switched on", "checkbox");
 
 Program.Run();
 </ScriptCondition>
